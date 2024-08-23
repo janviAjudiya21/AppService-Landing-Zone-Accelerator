@@ -46,7 +46,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Run Bicep linter
-        run: az bicep build --file ${{ inputs.modulePath }}
+        run: az bicep build --file ${{ inputs.modulePath }}/main.bicep
         # working-directory: ${{ inputs.modulePath }}
       
       # TODO: Buildout PSRule policies
