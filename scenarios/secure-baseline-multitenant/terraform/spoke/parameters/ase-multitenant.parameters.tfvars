@@ -1,7 +1,7 @@
 application_name = "eslz2"
 environment      = "prod"
 location         = "westus3"
-owner            = "cloudops@contoso.com"
+owner            = "janvi.ajudiya@celebaltech.com"
 
 # For the hub state, use the same settings as the remote state config on the hub deployment from /hub/main.tf
 hub_state_resource_group_name  = "backend-appsrvc-dev-westus2-001"
