@@ -2,7 +2,7 @@ application_name = "eslz2"
 environment      = "prod"
 location         = "westus2"
 # location_short   = "wus3"
-owner = "cloudops@contoso.com"
+owner = "janvi.ajudiya@celebaltech.com"
 
 # Toggle deployment of optional features and services for the Landing Zone
 deployment_options = {
