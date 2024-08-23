@@ -87,7 +87,7 @@ jobs:
             --location ${{ inputs.region }} \
             --template-file ${{ inputs.modulePath }}/main.bicep \
             --parameters ${{ inputs.bicepParamPath }} \
-            --action-on-unmanage KeepExisting \
+            --action-on-unmanage deleteResources \
             ${{ inputs.bicepAdditionalParams }}
 
       # Potential Deny Settings
