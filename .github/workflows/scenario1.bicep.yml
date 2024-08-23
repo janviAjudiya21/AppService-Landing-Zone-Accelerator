@@ -37,7 +37,7 @@ permissions:
 
 env:
   deployStackName: 'Scenario1-ASEv3-Secure-Baseline-MultiTenant'
-  deploymentPath: 'scenarios/secure-baseline-multitenant/bicep/main.bicep'
+  deploymentPath: 'scenarios/secure-baseline-multitenant/bicep'
   scenarioName: 'ase-multitenant'
   region: 'westus2'
   # webAppPlanSKU is the only parameter that is overridden for ASEv3
