@@ -21,7 +21,7 @@ on:
         type: string
         description: 'Optional parameters to pass to Bicep in string format'
         required: false
-        default: '--deny-settings-mode none'
+        default: --deny-settings-mode 'none'
       destroy:
         type: boolean
         description: 'Destroy resources?'
@@ -49,7 +49,7 @@ jobs:
         run: az bicep build --file ${{ inputs.modulePath }}
         # working-directory: ${{ inputs.modulePath }}
       
-      # TODO: Build out PSRule policies
+      # TODO: Buildout PSRule policies
       # - name: Run PSRule analysis
       #   uses: microsoft/ps-rule@v2.9.0
       #   with:
@@ -64,7 +64,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
     
       # Log into Azure via OIDC
       - uses: azure/login@v2
@@ -85,10 +85,11 @@ jobs:
 
           az stack sub create --name ${{ inputs.deployStackName }} \
             --location ${{ inputs.region }} \
-            --template-file ${{ inputs.modulePath }} \
+            --template-file ${{ inputs.modulePath }}/main.bicep \
             --parameters ${{ inputs.bicepParamPath }} \
+            --action-on-unmanage KeepExisting \
             ${{ inputs.bicepAdditionalParams }}
-      
+
       # Potential Deny Settings
       # -----------------------------
       # deny-settings-mode: Defines the operations that are prohibited on the managed resources to safeguard against unauthorized security principals attempting to delete or update them. This restriction applies to everyone unless explicitly granted access. The values include: none, denyDelete, and denyWriteAndDelete.
