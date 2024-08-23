@@ -85,7 +85,7 @@ jobs:
 
           az stack sub create --name ${{ inputs.deployStackName }} \
             --location ${{ inputs.region }} \
-            --template-file ${{ inputs.modulePath }}/main.bicep \
+            --template-file ${{ inputs.modulePath }} \
             --parameters ${{ inputs.bicepParamPath }} \
             --action-on-unmanage deleteResources \
             ${{ inputs.bicepAdditionalParams }}
