@@ -1,11 +1,11 @@
 application_name = "eslz2"
 environment      = "prod"
-location         = "westus3"
+location         = "westus2"
 owner            = "janvi.ajudiya@celebaltech.com"
 
 # For the hub state, use the same settings as the remote state config on the hub deployment from /hub/main.tf
-hub_state_resource_group_name  = "backend-appsrvc-dev-westus2-001"
-hub_state_storage_account_name = "stbackendappsrwestus2001"
+hub_state_resource_group_name  = "backend-appsrvc-production-eastus-001"
+hub_state_storage_account_name = "stbackendappsreastus001"
 hub_state_container_name       = "tfstate"
 hub_state_key                  = "scenario1.hub.tfstate"
 
