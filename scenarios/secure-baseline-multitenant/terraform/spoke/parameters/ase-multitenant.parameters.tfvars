@@ -24,8 +24,8 @@ vm_entra_admin_object_id = "bda41c64-1493-4d8d-b4b5-7135159d4884" # "AppSvcLZA M
 
 ## These settings are used for peering the spoke to the hub. Fill in the appropriate settings for your environment
 hub_settings = {
-  rg_name   = "rg-hub-scenario1-wus3"
-  vnet_name = "vnet-hub-scenario1-wus3"
+  rg_name   = "rg-hub-merge-ase-dev-westus2"
+  vnet_name = "vnet-merge-ase-dev-wus2-hub"
 
   firewall = {
     private_ip = "10.242.0.4"
