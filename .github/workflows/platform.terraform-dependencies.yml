@@ -61,7 +61,7 @@ jobs:
           if [ $(az storage account check-name --name $formatted_st_name --query nameAvailable) ]; then
             az storage account create \
               --name $formatted_st_name \
-              --resource-group ${{ steps.rg.outputs.rg_name }} \
+              --resource-group ${{ env.resource_prefix }}-${{ env.environment }}-${{env.location}}-${{ env.suffix }} \
               --location ${{ env.location }} \
               --subscription ${{ secrets.AZURE_SUBSCRIPTION }} \
               --sku Standard_LRS
