@@ -22,7 +22,7 @@ resource "azurerm_redis_cache" "this" {
   public_network_access_enabled = false
 
   redis_configuration {
-    enable_authentication = true
+    authentication_enabled = true
   }
 
   tags = local.tags
