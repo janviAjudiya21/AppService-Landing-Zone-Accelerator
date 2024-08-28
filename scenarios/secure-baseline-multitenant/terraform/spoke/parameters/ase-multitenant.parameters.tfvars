@@ -1,4 +1,4 @@
-application_name = "eslz2"
+application_name = "eslz200"
 environment      = "prod"
 location         = "eastus"
 owner            = "janvi.ajudiya@celebaltech.com"
