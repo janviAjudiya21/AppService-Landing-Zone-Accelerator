@@ -7,7 +7,7 @@ on:
         description: 'Azure Location'
         type: string
         required: true
-        default: 'westus2'
+        default: 'eastus'
       environment:
         type: environment
         description: 'Select the Environment'
