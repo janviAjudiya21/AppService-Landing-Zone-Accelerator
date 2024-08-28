@@ -1,6 +1,6 @@
 application_name = "eslz2"
 environment      = "prod"
-location         = "westus2"
+location         = "eastus"
 owner            = "janvi.ajudiya@celebaltech.com"
 
 # For the hub state, use the same settings as the remote state config on the hub deployment from /hub/main.tf
